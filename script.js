@@ -18,9 +18,16 @@ generateBtn.addEventListener("click", writePassword);
 
 // Generate password
 function generatePassword() {
+  var num = checkNumCharacters();
+  return;
+};
+
+// Check number of characters
+function checkNumCharacters() {
   var num = prompt("Please the number of characters that you want (8-128 character required)");
   if ((num >= 8) && (num <= 128)) {
     alert("Great! You want a password with " + num + " characters.");
+    return num;
   } else if (num < 8) {
     alert("Not enough characters. Try again.");
     return;
@@ -29,8 +36,13 @@ function generatePassword() {
     return;
   } else {
     alert ("Not a number. Try again.")
+    return;
   }
+}
 
-  return;
-};
+// Check what types of characters to add
+
+
+
+
 
