@@ -19,6 +19,7 @@ generateBtn.addEventListener("click", writePassword);
 // Generate password
 function generatePassword() {
   var num = checkNumCharacters();
+  var usable = charactersToAdd();
   return;
 };
 
@@ -41,6 +42,15 @@ function checkNumCharacters() {
 }
 
 // Check what types of characters to add
+function charactersToAdd() {
+  var usable = [];
+  var lower = confirm("Do you want to add LOWERCASE LETTERS to your password?");
+  var upper = confirm("Do you want to add UPPERCASE LETTERS to your password?");
+  var number = confirm("Do you want to add NUMERIC CHARACTERS to your password?");
+  var spec = confirm("Do you want to add SPECIAL CHARACTERS to your password?");
+}
+
+// Creates password from lists
 
 
 
