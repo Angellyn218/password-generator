@@ -60,9 +60,12 @@ function charactersToAdd() {
 
 }
 
-// Creates password from lists
-
 // function that randomly generates elements from a given array
+function generateRandomElement(array) {
+  var random = Math.floor(Math.random() * array.length);
+
+  return array[random];
+}
 
 // store and join elements into string (join, concat, push)
 
