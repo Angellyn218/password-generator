@@ -11,7 +11,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -20,14 +19,18 @@ generateBtn.addEventListener("click", writePassword);
 // Generate password
 function generatePassword() {
   var num = prompt("Please the number of characters that you want (8-128 character required)");
-  if (num < 8) {
-    alert("Not enough characters. Try again");
+  if ((num >= 8) && (num <= 128)) {
+    alert("Great! You want a password with " + num + " characters.");
+  } else if (num < 8) {
+    alert("Not enough characters. Try again.");
     return;
   } else if (num > 128) {
-    alert("Too many characters. Try again");
+    alert("Too many characters. Try again.");
     return;
+  } else {
+    alert ("Not a number. Try again.")
   }
-  
+
   return;
 };
 
