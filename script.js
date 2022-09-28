@@ -21,16 +21,27 @@ function charactersToAdd() {
     return null;
   }
 
-  var lower = confirm("Do you want to add LOWERCASE LETTERS to your password?");
-  var upper = confirm("Do you want to add UPPERCASE LETTERS to your password?");
-  var numberic = confirm("Do you want to add NUMERIC CHARACTERS to your password?");
-  var special = confirm("Do you want to add SPECIAL CHARACTERS to your password?");
+  var lower = false;
+  var upper = false;
+  var numeric = false;
+  var special = false; 
+
+  while (!lower && !upper && !numeric && !special) {
+    lower = confirm("Do you want to add LOWERCASE LETTERS to your password?");
+    upper = confirm("Do you want to add UPPERCASE LETTERS to your password?");
+    numeric = confirm("Do you want to add NUMERIC CHARACTERS to your password?");
+    special = confirm("Do you want to add SPECIAL CHARACTERS to your password?");
+
+    if (!lower && !upper && !numeric && !special) {
+      alert("No characters chosen. Try again.");
+    }
+  }
 
   var passwordAnswers = {
     num: num,
     lower: lower,
     upper: upper,
-    number: numberic,
+    number: numeric,
     spec: special,
   }
 
