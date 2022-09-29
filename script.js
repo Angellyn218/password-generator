@@ -84,7 +84,6 @@ function generatePassword() {
   return password;
 };
 
-// Given:
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
