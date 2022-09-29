@@ -2,13 +2,6 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
 Because of the desire for internet privacy, a lot of people require and use passwords to keep their profiles secure. However, it can be difficult to come up with a secure password, especially when a website requires password criteria like a certain length or special characters. In situations like the one previously mentioned, this website is perfect. It can generate a password to fit the required criteria. This web lets the user select the types characters that they want in their password, then will generate a random password with these characters. 
 
 From this project, I learned to apply the skills that I learned in Javascript to this website. I also learned to add new researched elements like the Math.random() function into my code. I also learned how to better pseudocode so that the building process was smoother. I plan on using these new learned skills in any future project.  
@@ -30,27 +23,29 @@ From this project, I learned to apply the skills that I learned in Javascript to
 
 ## Usage
 
+![Gif of password generating website being used](./assets/images/password-generator.gif)
+
 The best way to use this code is as it is designed as: a random password generator. The easiest way to use it is by opening the website using VS Code. To do this, right click on the index.html file and click on "Open in Default Browser." You can also open it using [my website](https://angellyn218.github.io/password-generator/).
 
 Once there, you will be greeted by this screen:
 
-![alt text](./assets/images/initial-screen.png)
+![Initial screen state of website](./assets/images/initial-screen.png)
 
 Click on the 'Generate Password' button where you will get the prompt:
 
-![alt text](./assets/images/number-prompt.png)
+![Prompt which asks user for number of characters](./assets/images/number-prompt.png)
 
 You can type in the number of characters that you want in the prompt's input box. Once inputed, you will get an alert based on the number of characters that you asked for. 
 
 After pressing ok on the alert, you will then get 4 confirm pop ups in a row that look like this:
 
-![alt text](./assets/images/confirm-character.png)
+![Confirm screen which asks if user wants to add lowercase letters to password](./assets/images/confirm-character.png)
 
 The character types that you will be asked to add are 'lowercase letters', 'uppercase letters', 'numeric characters', and 'special characters'. To add that character type to the password, press ok. To not use that character type, press cancel. You must chose at least one character type for the password to be able generate.
 
 Once you have selected the characters that you want to use in the password, the randomly generated password will appear in the box.
 
-![alt text](./assets/images/final-screen.png)
+![Final screen state of website with password displayed](./assets/images/final-screen.png)
 
 ## Code
 
@@ -73,8 +68,9 @@ while (!lower && !upper && !numeric && !special) {
     }
 }
 ```
+The first part of the code contains 4 different boolean variables. Each variable represents a character type and if it can be added to the password. If the variable is true, the character type can be added to the password. If false, the character type will not be added. 
 
-This code snippet asks the user to confirm which character types they want to add. However, they need to select at least one character type. If a character type is not chosen, then the while loop will force the user to choose character types again.
+The second part is a while loop. For the while loop to repeat, all values of the 4 boolean variables must be false. If at least one of them is true, the while loop breaks. Within the while loop, the user can confirm which types of characters they want to be added to their generated password. Each confirm returns a boolean value which is stored in the corresponding variable. If no variable types were chosen, the function lets the user know with an alert and the while loop is repeated. Once the user choses at least one character type that can be added to the password, the while loop breaks.
 
 ## Credits
 
@@ -91,6 +87,8 @@ Alert: https://www.w3schools.com/jsref/met_win_alert.asp
 document.querySelector: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 
 addEventListener: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+For recording gif: https://www.screencastify.com/get-started?gclid=CjwKCAjw4c-ZBhAEEiwAZ105RUm9HfoeDhj6eTgCmM2DakyCBTom58uDXoIPm4KrbTEqqQMaBwtteBoCA60QAvD_BwE
 
 ## License
 
